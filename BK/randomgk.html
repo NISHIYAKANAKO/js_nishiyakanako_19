@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>>動物PK</title>
+</head>
+<body>
+
+<header>
+    <!-- $('#id').load('samples/sample1.html div#side');を参考に！ -->
+    <h1>GKをランダムで選ぶ</h1>
+</header>
+
+<main>
+    <ul>
+        <li id="pull">GKガチャ</li>
+    </ul>
+    <p id="echo"></p>
+</main>
+
+<footer>フッター</footer>
+
+
+<script>
+$("#pull").on("click",function(){
+const num = Math.random();
+const r = Math.ceil(num*3);
+if(r == 1){
+    $("#echo").html("うさぎ");
+}
+if(r == 2){
+    $("#echo").html("犬");
+}
+
+if(r == 3){
+    $("#echo").html("ねこ");
+}
+});
+
+
+</script>
+</body>
+</html>

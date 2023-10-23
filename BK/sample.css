@@ -1,0 +1,19 @@
+li{
+    text-align: center;
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+}
+li:hover{
+    background: #0066CC;
+    color:#fff;
+} 
+
+.content {
+    max-width: 1080px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+

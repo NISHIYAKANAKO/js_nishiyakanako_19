@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <link rel="stylesheet" href="css/sample.css">
+  <title>動物PK</title>
+</head>
+
+<body>
+
+  <header>
+    <!-- うさぎと犬と猫と、、でrandomgkで選ばれたGKが表示される -->
+    <h1>うさぎ顔のGKとPK</h1>
+  </header>
+
+  <main>
+    <ul>
+      <li id="ball_reft">←</li>
+      <li id="ball_center">↑</li>
+      <li id="ball_right">→</li>
+    </ul>
+    <div>GKは「<span id="position">こっちに行ったよ</span>」</div>
+    <div id="result"> </div>
+  </main>
+  <footer></footer>
+  <script>
+
+    // #ball_reftが押されたら乱数を生成
+    $("#ball_reft").on("click", function () {
+      const num = Math.random();
+      const r = Math.ceil(num * 3);
+      //１だったら左、２だったら真ん中、３だったら右
+      if (r == 1) {
+        $("#position").html("←");
+        $("#result").html("残念");
+      }
+      if (r == 2) {
+        $("#position").html("↑");
+        $("#result").html("GOOOOOOOOOAL");
+      }
+      if (r == 3) {
+        $("#position").html("→");
+        $("#result").html("GOOOOOOOOOAL");
+      }
+    });
+
+    // #ball_centerが押されたら乱数を生成
+    $("#ball_center").on("click", function () {
+      const num = Math.random();
+      const r = Math.ceil(num * 3);
+      //１だったら左、２だったら真ん中、３だったら右
+      if (r == 1) {
+        $("#position").html("←");
+        $("#result").html("GOOOOOOOOOAL");
+      }
+      if (r == 2) {
+        $("#position").html("↑");
+        $("#result").html("残念");
+      }
+      if (r == 3) {
+        $("#position").html("→");
+        $("#result").html("GOOOOOOOOOAL");
+      }
+    });
+
+    // #ball_rightが押されたら乱数を生成
+    $("#ball_right").on("click", function () {
+      const num = Math.random();
+      const r = Math.ceil(num * 3);
+      //１だったら左、２だったら真ん中、３だったら右
+      if (r == 1) {
+        $("#position").html("←");
+        $("#result").html("GOOOOOOOOOAL");
+      }
+      if (r == 2) {
+        $("#position").html("↑");
+        $("#result").html("GOOOOOOOOOAL");
+      }
+      if (r == 3) {
+        $("#position").html("→");
+        $("#result").html("残念");
+      }
+    });
+
+  </script>
+</body>
+
+</html>
