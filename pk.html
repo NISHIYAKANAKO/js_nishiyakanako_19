@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <link rel="stylesheet" href="css/pk.css">
+  <title>モルちゃんとPK</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>モルちゃんとPKゲーム！</h1>
+  </header>
+<main>
+    <ul>
+      <div><span id="position"></span></div>
+      <li id="ball_left">左に蹴る<img src='img/pkl.png'></li>
+      <li id="ball_center">真ん中に蹴る<img src='img/pkc.png'></li>
+      <li id="ball_right">右に蹴る<img src='img/pkr.png'</li></li>
+      <div id="result"> <img src="img/pkstart.png"></div>
+      <div class="ta_right"><a href="shop.html"">オンラインショップに戻る</a></div>
+    </ul>
+  </main>
+ 
+
+
+  <script>
+
+    // #ball_leftが押されたら乱数を生成
+    $("#ball_left").on("click", function () {
+      const num = Math.random();
+      const r = Math.ceil(num * 3);
+      //１だったら左、２だったら真ん中、３だったら右
+      if (r == 1) {
+        $("#position").html("モルちゃんがボールをキャッチ！！！");
+        $("#result").html("<img src='img/pk-l2.png'>");
+      }
+      if (r == 2) {
+        $("#position").html("モルちゃんは動けませんでした。");
+        $("#result").html("<img src='img/pkmoru.png'>");
+      }
+      if (r == 3) {
+        $("#position").html("モルちゃんは右に行っちゃったよ！");
+        $("#result").html("<img src='img/pkmoru.png'>");
+      }
+    });
+
+    // #ball_centerが押されたら乱数を生成
+    $("#ball_center").on("click", function () {
+      const num = Math.random();
+      const r = Math.ceil(num * 3);
+      //１だったら左、２だったら真ん中、３だったら右
+      if (r == 1) {
+        $("#position").html("モルちゃんは左に行きました！");
+        $("#result").html("<img src='img/pkmoru.png'>");
+      }
+      if (r == 2) {
+        $("#position").html("モルちゃんがボールをキャッチ！！！");
+        $("#result").html("<img src='img/pk-c2.png'>");
+      }
+      if (r == 3) {
+        $("#position").html("モルちゃんは右に行っちゃったよ！");
+        $("#result").html("<img src='img/pkmoru.png'>");
+      }
+    });
+
+    // #ball_rightが押されたら乱数を生成
+    $("#ball_right").on("click", function () {
+      const num = Math.random();
+      const r = Math.ceil(num * 3);
+      //１だったら左、２だったら真ん中、３だったら右
+      if (r == 1) {
+        $("#position").html("モルちゃんは左に行きました！");
+        $("#result").html("<img src='img/pkmoru.png'>");
+      }
+      if (r == 2) {
+        $("#position").html("モルちゃんは動けませんでした。");
+        $("#result").html("<img src='img/pkmoru.png'>");
+      }
+      if (r == 3) {
+        $("#position").html("モルちゃんがボールをキャッチ！！！");
+        $("#result").html("<img src='img/pk-r2.png'>");
+      }
+    });
+
+  </script>
+
+</body>
+</html>
